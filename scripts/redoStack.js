@@ -5,7 +5,7 @@ class Node {
     }
 }
 
-class Stack {
+export class Stack {
     constructor() {
         this.head = null;
         this.tail = this.head;
@@ -66,18 +66,18 @@ class Stack {
     }
 }
 
-const stack = new Stack();
+// const stack = new Stack();
 
-stack.preAppend('This is a document');
-stack.preAppend('This is another document');
-stack.preAppend('The quick brown fox jumped over the lazy dog');
-stack.preAppend("print('Hello World')");
-stack.preAppend('Computer Architecture');
+// stack.preAppend('This is a document');
+// stack.preAppend('This is another document');
+// stack.preAppend('The quick brown fox jumped over the lazy dog');
+// stack.preAppend("print('Hello World')");
+// stack.preAppend('Computer Architecture');
 
-console.log(stack.print());
+// console.log(stack.print());
 
-stack.pop();
-stack.pop();
-stack.pop();
+// stack.pop();
+// stack.pop();
+// stack.pop();
 
-console.log(stack.print());
+// console.log(stack.print());
