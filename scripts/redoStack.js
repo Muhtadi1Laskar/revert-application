@@ -58,6 +58,12 @@ class Stack {
         }
         return array;
     }
+
+    clear() {
+        this.head = null;
+        this.tail = this.head;
+        this.length = 0;
+    }
 }
 
 const stack = new Stack();
