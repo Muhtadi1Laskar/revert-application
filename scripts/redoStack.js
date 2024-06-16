@@ -35,7 +35,7 @@ export class Stack {
 
     pop() {
         if (this.isEmpty()) {
-            return 'The stack is empty';
+            return null;
         }
         const lastItem = this.head;
 

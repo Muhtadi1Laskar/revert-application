@@ -1,38 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Editor Undo</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="form">
-            <textarea name="input" id="input" class="textarea"></textarea>
-            <button class="btn" id="btn">Submit</button>
-        </div>
-        <div class="card card-custom shadow-lg">
-            <div class="card-body">
-                <h5 class="card-title card-title-custom">Transaction Details</h5>
-                <p class="card-content"><i class="fas fa-clock card-icon"></i><strong>Time Stamp:</strong> <span id="timeStamp">Thu Jun 13 2024 14:48:56 GMT+0600 (Bangladesh Standard Time)</span></p>
-                <p class="card-content"><i class="fas fa-dollar-sign card-icon"></i><strong>Value:</strong> <span id="value">C</span></p>
-                <p class="card-content"><i class="fas fa-hashtag card-icon"></i><strong>Index:</strong> <span id="index">123</span></p>
-            </div>
-            <div class="card-footer">
-                <a href="#">View Details</a>
-            </div>
-        </div>
-    </div>
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script type="module" src="scripts/redoStack.js"></script>
-    <script type="module" src="scripts/app.js"></script>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,8 +33,8 @@
                       <h4 class="modal-title">Previous Data</h4>
                     </div>
                     <div class="modal-body">
-                        <p class="card-content"><i class="fas fa-clock card-icon"></i><strong>Time Stamp:</strong> <span id="modal-timeStamp"></span></p>
-                        <p class="card-content"><i class="fas fa-sticky-note note-icon"></i><strong>Note:</strong> <span id="modal-value"></span></p>
+                        <p class="card-content-modal"><i class="fas fa-clock card-icon"></i><strong>Time Stamp:</strong> <span id="modal-timeStamp"></span></p>
+                        <p class="card-content-modal"><i class="fas fa-sticky-note note-icon"></i><strong>Note:</strong> <span id="modal-value"></span></p>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
 body {
-    background-color: #f8f9fa;
+    background-color: #e0e0e0; 
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 .card-custom {
     margin-top: 40px;
@@ -9,7 +16,12 @@ body {
     border: none;
     border-radius: 15px;
     overflow: hidden;
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    /* background: linear-gradient(135deg, #5e7ce2 0%, #34495e 100%);*/
+    background: #457fca;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
     color: white;
 }
 .card-body {
@@ -21,8 +33,8 @@ body {
     font-weight: bold;
 }
 .card-content {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    font-size: 19px;
+    margin-top: 3rem;
 }
 .card-icon {
     font-size: 1.5rem;
@@ -44,10 +56,13 @@ body {
     border-radius: 5px;
     border: 1px solid #ccc;
     padding: 10px;
+    margin-top: 24px;
     margin-bottom: 20px;
+    background-color: #f8f9fa; /* Light background for textarea */
+    color: #34495e; /* Dark grey text */
 }
 .btn-revert {
-    background-color: #6c757d;
+    background-color: #1e3c72; /* Deep blue for revert button */
     color: white;
     border: none;
     border-radius: 5px;
@@ -56,13 +71,51 @@ body {
     cursor: pointer;
 }
 .btn-revert:hover {
-    background-color: #5a6268;
+    background-color: #162c5b;
 }
 
+.modal-content {
+    color: #457fca;
+}
+
+.modal-header, .modal-footer {
+    background: #457fca;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #5691c8, #457fca);  
+    background: linear-gradient(to bottom, #5691c8, #457fca); 
+    border: none;
+    color: white;
+}
+.modal-header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.modal-footer {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.btn-default {
+    background-color: #1e3c72; /* Deep blue for revert button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.btn-default:hover {
+    background-color: white;
+    columns: #1e3c72;
+}
 .note-icon {
-    margin-right: 10px;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
 }
 
-#myModal {
-    color: black;
+.card-content-modal {
+    font-size: 19px;
+    margin: 40px;
 }

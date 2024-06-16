@@ -38,7 +38,14 @@ const addDataToUI = (value) => {
 }
 
 const renderPoppedItem = (value) => {
-    console.log(value.index);
+    console.log(value);
+    if (!value) {
+        modalTimeStamp.innerText = '';
+        modalValue.innerText = '';
+        idTag.innerText = '';
+        return;
+    }
+
     modalTimeStamp.innerText = value.timeStamp;
     modalValue.innerText = value.value;
     idTag.innerText = value.index;
@@ -48,7 +55,9 @@ const revert = (stack) => {
     const poppedItem = stack.pop();
 
     renderPoppedItem(poppedItem);
+
     const data = stack.getData();
+
     addDataToUI(data);
 
     if (!data) {
