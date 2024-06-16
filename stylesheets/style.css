@@ -1,77 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-
 body {
-    background-color: #e0e0e0; 
+    background-color: #f5f5f5;
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
 }
-.card-custom {
-    margin-top: 40px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    /* background: linear-gradient(135deg, #5e7ce2 0%, #34495e 100%);*/
-    background: #457fca;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-
-    color: white;
-}
-.card-body {
-    padding: 2rem;
-    position: relative;
-}
-.card-title-custom {
-    font-size: 1.75rem;
-    font-weight: bold;
-}
-.card-content {
-    font-size: 19px;
-    margin-top: 3rem;
-}
-.card-icon {
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
-}
-.card-footer {
-    text-align: right;
-}
-.card-footer a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-}
-.card-footer a:hover {
-    text-decoration: underline;
+.container {
+    margin-top: 20px;
 }
 .textarea-custom {
     width: 100%;
     border-radius: 5px;
     border: 1px solid #ccc;
     padding: 10px;
-    margin-top: 24px;
     margin-bottom: 20px;
-    background-color: #f8f9fa; /* Light background for textarea */
-    color: #34495e; /* Dark grey text */
+    background-color: #f8f9fa; 
+    color: #34495e; 
 }
-.btn-revert {
-    background-color: #1e3c72; /* Deep blue for revert button */
+.btn-revert, .btn-view {
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.note-card {
     color: white;
-    border: none;
     border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 21px;
+    margin-bottom: 20px;
+    background: #457fca;
+    background: -webkit-linear-gradient(to right, #5691c8, #457fca);
+    background: linear-gradient(to right, #5691c8, #457fca);
+    max-height:400px;
+    overflow-y: auto;
 }
-.btn-revert:hover {
-    background-color: #162c5b;
+.note-card .card-content {
+    font-size: 1rem;
+    margin-top: 40px;
+}
+.note-card .card-content .card-icon {
+    margin-right: 5px;
+}
+.draft-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.draft-card {
+    flex: 0 0 30%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 15px;
+}
+.draft-card:nth-child(3n) {
+    margin-right: 0;
 }
 
 .modal-content {
@@ -79,38 +64,29 @@ body {
 }
 
 .modal-header, .modal-footer {
-    background: #457fca;  /* fallback for old browsers */
+    background: #457fca; 
     background: -webkit-linear-gradient(to bottom, #5691c8, #457fca);  
     background: linear-gradient(to bottom, #5691c8, #457fca); 
     border: none;
     color: white;
 }
+
 .modal-header {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+
 .modal-footer {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
 .modal-content {
     border-radius: 10px;
     overflow: hidden;
 }
-.btn-default {
-    background-color: #1e3c72; /* Deep blue for revert button */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-.btn-default:hover {
-    background-color: white;
-    columns: #1e3c72;
-}
-.note-icon {
+
+i {
     font-size: 1.5rem;
     margin-right: 0.5rem;
 }
@@ -118,4 +94,33 @@ body {
 .card-content-modal {
     font-size: 19px;
     margin: 40px;
+}
+
+#revertButton {
+    background-color: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#revertButton:hover {
+    background-color: #162c5b;
+}
+
+#modal-close-btn:hover {
+    background-color: white;
+    color: #1e3c72;
+}
+
+#modal-close-btn {
+    background-color: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
 }

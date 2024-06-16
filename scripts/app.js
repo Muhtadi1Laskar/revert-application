@@ -9,6 +9,8 @@ const modalTimeStamp = document.getElementById('modal-timeStamp');
 const modalValue = document.getElementById('modal-value');
 const modalIndex = document.getElementById('modal-index');
 
+console.log(textAreaTag);
+
 const debounce = 1000;
 
 const stack = new Stack();

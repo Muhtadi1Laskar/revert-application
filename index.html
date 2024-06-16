@@ -3,52 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Bootstrap Card Example with Textarea and Button</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Note Taking App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
+
     <div class="container">
-        <div class="card card-custom shadow-lg">
-            <div class="card-body">
-                <h5 class="card-title card-title-custom">Add a Short Note</h5>
-                <p class="card-content"><i class="fas fa-clock card-icon"></i><strong>Time Stamp:</strong> <span id="timeStamp"></span></p>
-                <p class="card-content"><i class="fas fa-sticky-note note-icon"></i><strong>Note:</strong> <span id="value"></span></p>
-                <p class="card-content"><i class="fas fa-hashtag card-icon"></i><strong>No. of Draft:</strong> <span id="index"></span></p>
-                <textarea class="textarea-custom" id="textarea" rows="4" placeholder="Enter your text here..."></textarea>
-                <div class="text-right">
-                    <button class="btn-revert" id="revertButton">Revert</button>
+        <div class="row">
+            <div class="col-md-6">
+                <textarea class="textarea-custom" id="textarea" rows="4" placeholder="Enter the Note..."></textarea>
+                <button class="btn btn-primary btn-revert" id="revertButton">Revert</button>
+                <button class="btn btn-secondary btn-view" data-toggle="modal" data-target="#myModal">View Note</button>
+            </div>
+            <div class="col-md-6">
+                <div class="note-card">
+                    <h5 class="card-title card-title-custom">Add a Short Note</h5>
+                    <p class="card-content"><i class="fas fa-clock card-icon"></i><strong>Time Stamp:</strong> <span id="timeStamp"></span></p>
+                    <p class="card-content"><i class="fas fa-sticky-note note-icon"></i><strong>Note:</strong> <span id="value"></span></p>
+                    <p class="card-content"><i class="fas fa-hashtag card-icon"></i><strong>No. of Draft:</strong> <span id="index"></span></p>
                 </div>
             </div>
-            <div class="card-footer">
-                <a href="#" data-toggle="modal" data-target="#myModal">View Previous Note</a>
+        </div>
+        <div class="row draft-container">
+            <div class="draft-card">
+                <p><strong>Time:</strong> Data</p>
+                <p><strong>Value:</strong> Data</p>
+                <p><strong>Index:</strong> Data</p>
             </div>
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog modal-dialog-centered">
-                
-                  <!-- Modal content-->
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h4 class="modal-title">Previous Data</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p class="card-content-modal"><i class="fas fa-clock card-icon"></i><strong>Time Stamp:</strong> <span id="modal-timeStamp"></span></p>
-                        <p class="card-content-modal"><i class="fas fa-sticky-note note-icon"></i><strong>Note:</strong> <span id="modal-value"></span></p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                  
+        </div>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Previous Data</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="card-content-modal"><i class="fas fa-clock card-icon"></i><strong>Time Stamp:</strong> <span id="modal-timeStamp"></span></p>
+                    <p class="card-content-modal"><i class="fas fa-sticky-note note-icon"></i><strong>Note:</strong> <span id="modal-value"></span></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" id="modal-close-btn" data-dismiss="modal">Close</button>
                 </div>
               </div>
-        </div>
+              
+            </div>
+          </div>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script type="module" src="scripts/redoStack.js"></script>
     <script type="module" src="scripts/app.js"></script>
