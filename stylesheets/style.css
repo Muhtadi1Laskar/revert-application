@@ -22,6 +22,10 @@ body {
 .btn-revert, .btn-view {
     margin-right: 10px;
     margin-bottom: 20px;
+    background: #00c6ff; 
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    border-color: #0072ff;
 }
 .note-card {
     color: white;
@@ -29,9 +33,9 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 21px;
     margin-bottom: 20px;
-    background: #457fca;
-    background: -webkit-linear-gradient(to right, #5691c8, #457fca);
-    background: linear-gradient(to right, #5691c8, #457fca);
+    background: #00c6ff;
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff); 
+    background: linear-gradient(to right, #0072ff, #00c6ff);
     max-height:400px;
     overflow-y: auto;
 }
@@ -123,4 +127,18 @@ i {
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
+}
+
+.draft-card {
+    background: #00c6ff; 
+    background: -webkit-linear-gradient(to left, #0072ff, #00c6ff);
+    background: linear-gradient(to left, #0072ff, #00c6ff);
+    text-align: center;
+    padding: 3rem;
+    color: ghostwhite;
+    overflow-y: auto;
+    max-height: 30rem;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
 }

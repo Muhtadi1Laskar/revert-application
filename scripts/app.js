@@ -7,7 +7,7 @@ const valueTag = document.getElementById('value');
 const idTag = document.getElementById('index');
 const modalTimeStamp = document.getElementById('modal-timeStamp');
 const modalValue = document.getElementById('modal-value');
-const modalIndex = document.getElementById('modal-index');
+const draftCardTag = document.getElementById('output-div');
 
 console.log(textAreaTag);
 
@@ -25,6 +25,7 @@ const addItem = (e, stack) => {
 
     const data = stack.getData();
     addDataToUI(data);
+    renderAllNotes(stack);
 }
 
 const addDataToUI = (value) => {
@@ -53,6 +54,25 @@ const renderPoppedItem = (value) => {
     idTag.innerText = value.index;
 }
 
+const renderAllNotes = (chain) => {
+    const allData = chain.getList();
+    if(allData) {
+        const html = allData.map((elem) => {
+            console.log(elem);
+            return `
+                <div class="draft-card">
+                    <p><strong>Time:</strong> ${elem.time}</p>
+                    <p><strong>Value:</strong> ${elem.value}</p>
+                    <p><strong>Index:</strong> ${elem.index}</p>
+                </div>
+            `;
+        }).join('');
+        draftCardTag.innerHTML = html;
+        return;
+    }
+    draftCardTag.innerHTML = '';
+};
+
 const revert = (stack) => {
     const poppedItem = stack.pop();
 
@@ -67,6 +87,8 @@ const revert = (stack) => {
     } else {
         textAreaTag.value = data.value;
     }
+
+    renderAllNotes(stack);
 }
 
 textAreaTag.addEventListener('keyup', (e) => {
