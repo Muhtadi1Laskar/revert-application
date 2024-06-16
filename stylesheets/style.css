@@ -1,10 +1,64 @@
-.textarea {
-    width: 40rem;
-    height: 10rem;
+body {
+    background-color: #f8f9fa;
+}
+.card-custom {
+    margin-top: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+.card-body {
+    padding: 2rem;
+    position: relative;
+}
+.card-title-custom {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+.card-content {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.card-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+.card-footer {
+    text-align: right;
+}
+.card-footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.card-footer a:hover {
+    text-decoration: underline;
+}
+.textarea-custom {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.btn-revert {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.btn-revert:hover {
+    background-color: #5a6268;
 }
 
-.btn {
-    width: 6rem;
-    height: 2rem;
-    border-radius: 3px;
+.note-icon {
+    margin-right: 10px;
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,11 +12,62 @@
             <textarea name="input" id="input" class="textarea"></textarea>
             <button class="btn" id="btn">Submit</button>
         </div>
-        <div class="output">
-
+        <div class="card card-custom shadow-lg">
+            <div class="card-body">
+                <h5 class="card-title card-title-custom">Transaction Details</h5>
+                <p class="card-content"><i class="fas fa-clock card-icon"></i><strong>Time Stamp:</strong> <span id="timeStamp">Thu Jun 13 2024 14:48:56 GMT+0600 (Bangladesh Standard Time)</span></p>
+                <p class="card-content"><i class="fas fa-dollar-sign card-icon"></i><strong>Value:</strong> <span id="value">C</span></p>
+                <p class="card-content"><i class="fas fa-hashtag card-icon"></i><strong>Index:</strong> <span id="index">123</span></p>
+            </div>
+            <div class="card-footer">
+                <a href="#">View Details</a>
+            </div>
         </div>
     </div>
     
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="module" src="scripts/redoStack.js"></script>
+    <script type="module" src="scripts/app.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Bootstrap Card Example with Textarea and Button</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card card-custom shadow-lg">
+            <div class="card-body">
+                <h5 class="card-title card-title-custom">Stack Data</h5>
+                <p class="card-content"><i class="fas fa-clock card-icon"></i><strong>Time Stamp:</strong> <span id="timeStamp"></span></p>
+                <p class="card-content"><i class="fas fa-sticky-note note-icon"></i><strong>Note:</strong> <span id="value"></span></p>
+                <p class="card-content"><i class="fas fa-hashtag card-icon"></i><strong>No. of Draft:</strong> <span id="index"></span></p>
+                <textarea class="textarea-custom" id="textarea" rows="4" placeholder="Enter your text here..."></textarea>
+                <div class="text-right">
+                    <button class="btn-revert" id="revertButton">Revert</button>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#">View Details</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script type="module" src="scripts/redoStack.js"></script>
     <script type="module" src="scripts/app.js"></script>
 </body>

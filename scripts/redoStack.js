@@ -1,5 +1,6 @@
 class Node {
     constructor(value) {
+        this.timeStamp = new Date();
         this.value = value;
         this.next = null;
     }
@@ -42,6 +43,35 @@ export class Stack {
         this.length--;
 
         return lastItem;
+    }
+
+    getData() {
+        // const array = [];
+
+        // if(this.isEmpty()) {
+        //     return 'The stack is empty';
+        // }
+        // let currentNode = this.head;
+        // let idx = 1;
+
+        // while(currentNode) {
+        //     array.push({
+        //         time: currentNode.timeStamp,
+        //         value: currentNode.value,
+        //         index: idx
+        //     });
+        //     idx += 1;
+        //     currentNode = currentNode.next;
+        // }
+        // return array;
+        if(this.isEmpty()) {
+            return null;
+        }
+        return {
+            timeStamp: this.head.timeStamp,
+            value: this.head.value,
+            index: this.length
+        };
     }
 
     print() {
