@@ -10,8 +10,6 @@ const modalValue = document.getElementById('modal-value');
 const draftCardTag = document.getElementById('output-div');
 const outputHeadingTag = document.querySelector('.output-heading');
 
-console.log(textAreaTag);
-
 const debounce = 1000;
 
 const stack = new Stack();
@@ -44,7 +42,6 @@ const addDataToUI = (value) => {
 }
 
 const renderPoppedItem = (value) => {
-    console.log(value);
     if (!value) {
         modalTimeStamp.innerText = '';
         modalValue.innerText = '';
@@ -61,7 +58,6 @@ const renderAllNotes = (chain) => {
     const allData = chain.getList();
     if(allData) {
         const html = allData.map((elem) => {
-            console.log(elem);
             return `
                 <div class="draft-card">
                     <p><strong>Time:</strong> ${elem.time}</p>
