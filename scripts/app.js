@@ -1,13 +1,13 @@
-import {
-    Stack
-} from "./redoStack.js";
+import { Stack } from "./redoStack.js";
 
 const textAreaTag = document.getElementById('textarea');
 const btn = document.getElementById('revertButton');
 const timeStampTag = document.getElementById('timeStamp');
 const valueTag = document.getElementById('value');
 const idTag = document.getElementById('index');
-const cardTag = document.querySelector('.card-body');
+const modalTimeStamp = document.getElementById('modal-timeStamp');
+const modalValue = document.getElementById('modal-value');
+const modalIndex = document.getElementById('modal-index');
 
 const debounce = 1000;
 
@@ -37,9 +37,17 @@ const addDataToUI = (value) => {
     idTag.innerText = value.index;
 }
 
-const revert = (stack) => {
-    stack.pop();
+const renderPoppedItem = (value) => {
+    console.log(value.index);
+    modalTimeStamp.innerText = value.timeStamp;
+    modalValue.innerText = value.value;
+    idTag.innerText = value.index;
+}
 
+const revert = (stack) => {
+    const poppedItem = stack.pop();
+
+    renderPoppedItem(poppedItem);
     const data = stack.getData();
     addDataToUI(data);
 

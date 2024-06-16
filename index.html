@@ -39,9 +39,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enhanced Bootstrap Card Example with Textarea and Button</title>
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
@@ -49,7 +47,7 @@
     <div class="container">
         <div class="card card-custom shadow-lg">
             <div class="card-body">
-                <h5 class="card-title card-title-custom">Stack Data</h5>
+                <h5 class="card-title card-title-custom">Add a Short Note</h5>
                 <p class="card-content"><i class="fas fa-clock card-icon"></i><strong>Time Stamp:</strong> <span id="timeStamp"></span></p>
                 <p class="card-content"><i class="fas fa-sticky-note note-icon"></i><strong>Note:</strong> <span id="value"></span></p>
                 <p class="card-content"><i class="fas fa-hashtag card-icon"></i><strong>No. of Draft:</strong> <span id="index"></span></p>
@@ -59,8 +57,27 @@
                 </div>
             </div>
             <div class="card-footer">
-                <a href="#">View Details</a>
+                <a href="#" data-toggle="modal" data-target="#myModal">View Previous Note</a>
             </div>
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Previous Data</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="card-content"><i class="fas fa-clock card-icon"></i><strong>Time Stamp:</strong> <span id="modal-timeStamp"></span></p>
+                        <p class="card-content"><i class="fas fa-sticky-note note-icon"></i><strong>Note:</strong> <span id="modal-value"></span></p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
         </div>
     </div>
 
