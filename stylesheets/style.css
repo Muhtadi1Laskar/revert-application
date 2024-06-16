@@ -142,3 +142,16 @@ i {
     justify-content: center;
     justify-items: center;
 }
+
+.output-heading {
+    display: none;
+    color: #0072ff;
+}
+
+.arrow {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #457fca; /* Match your color scheme */
+    vertical-align: middle; /* Align arrows with the divs */
+}

@@ -8,6 +8,7 @@ const idTag = document.getElementById('index');
 const modalTimeStamp = document.getElementById('modal-timeStamp');
 const modalValue = document.getElementById('modal-value');
 const draftCardTag = document.getElementById('output-div');
+const outputHeadingTag = document.querySelector('.output-heading');
 
 console.log(textAreaTag);
 
@@ -25,6 +26,8 @@ const addItem = (e, stack) => {
 
     const data = stack.getData();
     addDataToUI(data);
+
+    outputHeadingTag.style.display = "block";
     renderAllNotes(stack);
 }
 
@@ -70,6 +73,7 @@ const renderAllNotes = (chain) => {
         draftCardTag.innerHTML = html;
         return;
     }
+    outputHeadingTag.style.display = "none";
     draftCardTag.innerHTML = '';
 };
 
